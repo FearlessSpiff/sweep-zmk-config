@@ -11,19 +11,27 @@
 #include "keymap_german.h"
 
 // Layers
-#define DEFAULT 0
+#define DEF     0
 #define NAV     1
 #define SYM     2
 #define NUM     3
 #define FN      4
 #define SET     5
 
+#define M_DEF   6
+#define M_NAV   7
+#define M_SYM   8
+#define M_NUM   9
+#define M_FN    10
+#define M_SET   11
 // Special shortcuts
-#define ________   &trans
-#define TODO       &trans
-#define DEL_W      &kp LC(BSPC)
-#define SPACE_SYM  &lt SYM SPACE
-#define C_NAV      &lt NAV C
+#define ________     &trans
+#define TODO         &trans
+#define DEL_W        &kp LC(BSPC)
+#define SPACE_SYM    &lt SYM SPACE
+#define SPACE_M_SYM  &lt M_SYM SPACE
+#define C_NAV        &lt NAV C
+#define C_M_NAV      &lt M_NAV C
 
 #define BT_1       &bt BT_SEL 0
 #define BT_2       &bt BT_SEL 1
@@ -144,9 +152,9 @@
 
         default_layer {
             bindings = <
-                &kp J  &kp L  &kp U        &kp A        &kp Q                   &kp W      &kp B      &kp D        &kp G      &kp DE_Z
-                C_NAV  ALT_R  CTL_I        SFT_E        &kp O                   &kp M      SFT_N      CTL_T        RALT_S  &kp H
-                &kp V  &kp X  &kp DE_UDIA  &kp DE_ADIA  &kp DE_ODIA             &kp P      &kp F      &kp COMMA    &kp DOT    &kp K
+                &kp J  &kp L  &kp U        &kp A        &kp Q                   &kp W      &kp B      &kp D        &kp G    &kp DE_Z
+                C_NAV  ALT_R  CTL_I        SFT_E        &kp O                   &kp M      SFT_N      CTL_T        RALT_S   &kp H
+                &kp V  &kp X  &kp DE_UDIA  &kp DE_ADIA  &kp DE_ODIA             &kp P      &kp F      &kp COMMA    &kp DOT  &kp K
                                            &mo NUM      &kp LSHFT               SPACE_SYM  &kp BSPC
              >;
         };
@@ -199,8 +207,76 @@
 
         settings_layer {
             bindings = <
-                EXT_OFF   EXT_ON    ________  ________  BT_CLEAR          ________  ________  ________  ________  ________
-                ________  ________  ________  ________  ________          ________  BT_4      BT_5      BT_6      ________
+                EXT_OFF   EXT_ON    ________  ________  BT_CLEAR          ________  ________  ________  ________  &to DEF
+                ________  ________  ________  ________  ________          ________  BT_4      BT_5      BT_6      &to M_DEF
+                ________  ________  ________  ________  ________          ________  BT_1      BT_2      BT_3      ________
+                                              ________  ________          ________  ________
+            >;
+        };
+
+
+
+
+
+        mac_default_layer {
+            bindings = <
+                &kp J    &kp L  &kp U        &kp A        &kp Q                   &kp W        &kp B      &kp D        &kp G    &kp DE_Z
+                C_M_NAV  ALT_R  CTL_I        SFT_E        &kp O                   &kp M        SFT_N      CTL_T        RALT_S   &kp H
+                &kp V    &kp X  &kp DE_UDIA  &kp DE_ADIA  &kp DE_ODIA             &kp P        &kp F      &kp COMMA    &kp DOT  &kp K
+                                             &mo M_NUM    &kp LSHFT               SPACE_M_SYM  &kp BSPC
+             >;
+        };
+
+
+        mac_nav_layer {
+            bindings = <
+            	&kp ESC   ________   &run      &go_src   ________             &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp DE_Y
+            	________  ________   ________  ________  ________             &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp RET
+            	&kp LSHFT ________   ________  ________  ________             ________   ________  ________  ________   &kp DE_SS
+            	                               ________  ________             ________   &kp DEL
+   			>;
+        };
+
+
+        mac_sym_layer {
+        // --------------------------------------------------------------------------------------------------------
+        // |  °  |  ^  |  _  |  {  |  }  |  @  |                             |  !  |  <  |  >  |  =  |  &  |  ²  |
+        // |  €  |  \  |  /  |  (  |  )  |  *  |                             |  ?  |  [  |  ]  |  -  |  :  |  ³  |
+        // |  §  |  `  |  $  |  |  |  ~  |  #  | --- | --- |     | --- | --- |  +  |  %  |  "  |  '  |  ;  |  µ  |
+        //                   | --- | --- | --- | --- | --- |     | --- | --- | --- | --- | --- |
+        	bindings = <
+                &kp DE_CIRC  &kp DE_UNDS  &kp DE_LCBR  &kp DE_RCBR  &kp DE_AT            &kp DE_EXLM  &kp DE_LABK  &kp DE_RABK  &kp DE_EQL   &kp DE_AMPR
+                &kp DE_BSLS  &kp DE_SLSH  &kp DE_LPRN  SFT_RPRN     &kp DE_ASTR          &kp DE_QUES  SFT_LBRC     &kp DE_RBRC  &kp DE_MINS  &kp DE_COLN
+                &kp DE_ACUT  &kp DE_DLR   &kp DE_PIPE  &kp DE_TILD  &kp DE_HASH          &kp DE_PLUS  &kp DE_PERC  &kp DE_DQUO  &kp DE_QUOT  &kp DE_SCLN
+        	                                           ________     ________             ________     ________
+        	>;
+        };
+
+
+        mac_num_layer {
+            bindings = <
+                ________  ________  ________  &mo M_SET   ________          &kp KP_DIVIDE    &kp N7  &kp N8  &kp N9  &kp KP_MINUS
+                &sk LGUI  &sk LALT  &sk LCTRL &sk LSHIFT  ________          &kp KP_MULTIPLY  &kp N4  &kp N5  &kp N6  &kp KP_PLUS
+                ________  ________  ________  &mo M_FN    ________          &kp DE_SCLN      &kp N1  &kp N2  &kp N3  &kp N0
+                                              ________    ________          &kp DE_COLN      &kp DOT
+            >;
+        };
+
+
+        mac_fn_layer {
+            bindings = <
+                ________  ________  ________  ________  ________          ________  &kp F7  &kp F8  &kp F9  ________
+                ________  ________  ________  ________  ________          ________  &kp F4  &kp F5  &kp F6  ________
+                ________  ________  ________  ________  ________          ________  &kp F1  &kp F2  &kp F3  &kp F10
+                                              ________  ________          &kp F11   &kp F12
+            >;
+        };
+
+
+        mac_settings_layer {
+            bindings = <
+                EXT_OFF   EXT_ON    ________  ________  BT_CLEAR          ________  ________  ________  ________  &to DEF
+                ________  ________  ________  ________  ________          ________  BT_4      BT_5      BT_6      &to M_DEF
                 ________  ________  ________  ________  ________          ________  BT_1      BT_2      BT_3      ________
                                               ________  ________          ________  ________
             >;
