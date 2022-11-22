@@ -44,12 +44,6 @@
 #define EXT_OFF &ext_power EP_OFF
 #define EXT_ON &ext_power EP_ON
 
-#define UG_TOG     &rgb_ug RGB_TOG
-#define UG_NEXT    &rgb_ug RGB_EFF
-#define UG_BRGHT   &rgb_ug RGB_BRI
-#define UG_DARK    &rgb_ug RGB_BRD
-#define UG_LILA    &rgb_ug RGB_COLOR_HSB(282, 100, 83)
-
 // home row mod left
 #define ALT_R &hm LALT R
 #define CTL_I &hm LCTRL I
@@ -163,13 +157,13 @@
 
 
         sym_layer {
-        // --------------------------------------------------------------------------------------------------------
-        // |  °  |  ^  |  _  |  {  |  }  |  @  |                             |  !  |  <  |  >  |  =  |  &  |  ²  |
-        // |  €  |  \  |  /  |  (  |  )  |  *  |                             |  ?  |  [  |  ]  |  -  |  :  |  ³  |
-        // |  §  |  `  |  $  |  |  |  ~  |  #  | --- | --- |     | --- | --- |  +  |  %  |  "  |  '  |  ;  |  µ  |
-        //                   | --- | --- | --- | --- | --- |     | --- | --- | --- | --- | --- |
+        // ---------------------------------------------------------------------
+        // |  ^  |  _  |  {  |  }  |  §  |       |  !  |  <  |  >  |  =  |  &  |
+        // |  \  |  /  |  (  |  )  |  *  |       |  ?  |  [  |  ]  |  -  |  :  |
+        // |  `  |  $  |  |  |  ~  |  #  |       |  +  |  %  |  "  |  '  |  ;  |
+        //                   | --- | --- |       | --- | --- |
         	bindings = <
-                &kp DE_CIRC  &kp DE_UNDS  &kp DE_LCBR  &kp DE_RCBR  &kp DE_AT            &kp DE_EXLM  &kp DE_LABK  &kp DE_RABK  &kp DE_EQL   &kp DE_AMPR
+                &kp DE_CIRC  &kp DE_UNDS  &kp DE_LCBR  &kp DE_RCBR  &kp DE_SECT          &kp DE_EXLM  &kp DE_LABK  &kp DE_RABK  &kp DE_EQL   &kp DE_AMPR
                 &kp DE_BSLS  &kp DE_SLSH  &kp DE_LPRN  SFT_RPRN     &kp DE_ASTR          &kp DE_QUES  SFT_LBRC     &kp DE_RBRC  &kp DE_MINS  &kp DE_COLN
                 &kp DE_ACUT  &kp DE_DLR   &kp DE_PIPE  &kp DE_TILD  &kp DE_HASH          &kp DE_PLUS  &kp DE_PERC  &kp DE_DQUO  &kp DE_QUOT  &kp DE_SCLN
         	                                           ________     ________             ________     ________
@@ -231,16 +225,16 @@
 
 
         mac_sym_layer {
-        // --------------------------------------------------------------------------------------------------------
-        // |  °  |  ^  |  _  |  {  |  }  |  @  |                             |  !  |  <  |  >  |  =  |  &  |  ²  |
-        // |  €  |  \  |  /  |  (  |  )  |  *  |                             |  ?  |  [  |  ]  |  -  |  :  |  ³  |
-        // |  §  |  `  |  $  |  |  |  ~  |  #  | --- | --- |     | --- | --- |  +  |  %  |  "  |  '  |  ;  |  µ  |
-        //                   | --- | --- | --- | --- | --- |     | --- | --- | --- | --- | --- |
+        // ---------------------------------------------------------------------
+        // |  ^  |  _  |  {  |  }  |  §  |       |  !  |  <  |  >  |  =  |  &  |
+        // |  \  |  /  |  (  |  )  |  *  |       |  ?  |  [  |  ]  |  -  |  :  |
+        // |  `  |  $  |  |  |  ~  |  #  |       |  +  |  %  |  "  |  '  |  ;  |
+        //                   | --- | --- |       | --- | --- |
         	bindings = <
-                &kp DE_CIRC  &kp DE_UNDS  &kp DE_LCBR  &kp DE_RCBR  &kp DE_AT            &kp DE_EXLM  &kp DE_LABK  &kp DE_RABK  &kp DE_EQL   &kp DE_AMPR
-                &kp DE_BSLS  &kp DE_SLSH  &kp DE_LPRN  SFT_RPRN     &kp DE_ASTR          &kp DE_QUES  SFT_LBRC     &kp DE_RBRC  &kp DE_MINS  &kp DE_COLN
-                &kp DE_ACUT  &kp DE_DLR   &kp DE_PIPE  &kp DE_TILD  &kp DE_HASH          &kp DE_PLUS  &kp DE_PERC  &kp DE_DQUO  &kp DE_QUOT  &kp DE_SCLN
-        	                                           ________     ________             ________     ________
+                &kp DE_LABK  &kp DE_UNDS  &kp DE_LCBR     &kp DE_RCBR  &kp LS(N3)           &kp DE_EXLM  &kp DE_CIRC  &kp LS(DE_CIRC)  &kp DE_EQL   &kp DE_AMPR
+                &kp DE_BSLS  &kp DE_SLSH  &kp DE_LPRN     SFT_RPRN     &kp DE_ASTR          &kp DE_QUES  SFT_LBRC     &kp DE_RBRC      &kp DE_MINS  &kp DE_COLN
+                &kp DE_ACUT  &kp DE_DLR   &kp LA(DE_CIRC) &kp DE_TILD  &kp DE_HASH          &kp DE_PLUS  &kp DE_PERC  &kp DE_DQUO      &kp DE_QUOT  &kp DE_SCLN
+        	                                              ________     ________             ________     ________
         	>;
         };
 
@@ -250,7 +244,7 @@
                 ________   ________  ________  &mo M_SET   ________          &kp KP_DIVIDE    &kp N7  &kp N8  &kp N9  &kp KP_MINUS
                 &sk LCTRL  &sk LALT  &sk LGUI  &sk LSHIFT  ________          &kp KP_MULTIPLY  &kp N4  &kp N5  &kp N6  &kp KP_PLUS
                 ________   ________  ________  &mo M_FN    ________          &kp DE_SCLN      &kp N1  &kp N2  &kp N3  &kp N0
-                                              ________    ________          &kp DE_COLN      &kp DOT
+                                              ________    ________           &kp DE_COLN      &kp DOT
             >;
         };
 
