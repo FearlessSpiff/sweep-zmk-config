@@ -51,28 +51,20 @@
 #define UG_LILA    &rgb_ug RGB_COLOR_HSB(282, 100, 83)
 
 // home row mod left
-#define ALT_S &hm LALT S
 #define ALT_R &hm LALT R
-#define ALT_3 &hm LALT N3
-#define CTL_D &hm LCTRL D
 #define CTL_I &hm LCTRL I
-#define CTL_4 &hm LCTRL N4
-#define SFT_F &hm LSHIFT F
 #define SFT_E &hm LSHIFT E
-#define SFT_5 &hm LSHIFT N5
+#define SFT_RPRN &hm RSHIFT DE_RPRN
 
 // home row mod right
-#define SFT_8    &hm RSHIFT N8
-#define SFT_J    &hm RSHIFT J
 #define SFT_N    &hm RSHIFT N
 #define SFT_LBRC &hm RSHIFT DE_LBRC
-#define SFT_RPRN &hm RSHIFT DE_RPRN
-#define CTL_K    &hm RCTRL K
 #define CTL_T    &hm RCTRL T
-#define CTL_9    &hm RCTRL N9
-#define ALT_L    &hm RALT L
 #define RALT_S   &hm RALT S
-#define ALT_0    &hm RALT N0
+
+// home row mod mac
+#define CMD_I  &hm LGUI I
+#define CMD_T  &hm LGUI T
 
 &sk {
         release-after-ms = <3000>;
@@ -221,7 +213,7 @@
         mac_default_layer {
             bindings = <
                 &kp J    &kp L  &kp U        &kp A        &kp Q                   &kp W        &kp B      &kp D        &kp G    &kp DE_Z
-                C_M_NAV  ALT_R  CTL_I        SFT_E        &kp O                   &kp M        SFT_N      CTL_T        RALT_S   &kp H
+                C_M_NAV  ALT_R  CMD_I        SFT_E        &kp O                   &kp M        SFT_N      CMD_T        RALT_S   &kp H
                 &kp V    &kp X  &kp DE_UDIA  &kp DE_ADIA  &kp DE_ODIA             &kp P        &kp F      &kp COMMA    &kp DOT  &kp K
                                              &mo M_NUM    &kp LSHFT               SPACE_M_SYM  &kp BSPC
              >;
@@ -255,9 +247,9 @@
 
         mac_num_layer {
             bindings = <
-                ________  ________  ________  &mo M_SET   ________          &kp KP_DIVIDE    &kp N7  &kp N8  &kp N9  &kp KP_MINUS
-                &sk LGUI  &sk LALT  &sk LCTRL &sk LSHIFT  ________          &kp KP_MULTIPLY  &kp N4  &kp N5  &kp N6  &kp KP_PLUS
-                ________  ________  ________  &mo M_FN    ________          &kp DE_SCLN      &kp N1  &kp N2  &kp N3  &kp N0
+                ________   ________  ________  &mo M_SET   ________          &kp KP_DIVIDE    &kp N7  &kp N8  &kp N9  &kp KP_MINUS
+                &sk LCTRL  &sk LALT  &sk LGUI  &sk LSHIFT  ________          &kp KP_MULTIPLY  &kp N4  &kp N5  &kp N6  &kp KP_PLUS
+                ________   ________  ________  &mo M_FN    ________          &kp DE_SCLN      &kp N1  &kp N2  &kp N3  &kp N0
                                               ________    ________          &kp DE_COLN      &kp DOT
             >;
         };
