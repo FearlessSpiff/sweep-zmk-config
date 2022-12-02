@@ -92,16 +92,38 @@
         )
 
 	    ZMK_MACRO(cad,
-                wait-ms = <30>;
-                tap-ms = <40>;
-                bindings
-                    = <&macro_press   &kp LCTL>
-                    , <&macro_press   &kp LALT>
-                    , <&macro_tap     &kp DEL>
-                    , <&macro_release &kp LALT>
-                    , <&macro_release &kp LCTL>
-                    ;
-            )
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press   &kp LCTL>
+                , <&macro_press   &kp LALT>
+                , <&macro_tap     &kp DEL>
+                , <&macro_release &kp LALT>
+                , <&macro_release &kp LCTL>
+                ;
+        )
+
+        ZMK_MACRO(lck,
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press   &kp LGUI>
+                , <&macro_tap     &kp L>
+                , <&macro_release &kp LGUI>
+                ;
+        )
+
+        ZMK_MACRO(lck_mac,
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press   &kp LGUI>
+                , <&macro_press   &kp LCTL>
+                , <&macro_tap     &kp Q>
+                , <&macro_release &kp LCTL>
+                , <&macro_release &kp LGUI>
+                ;
+        )
     };
 
     combos {
@@ -148,7 +170,7 @@
 
         nav_layer {
             bindings = <
-            	&kp ESC   ________   &run      &go_src   ________             &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp DE_Y
+            	&kp ESC   &lck       &run      &go_src   ________             &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp DE_Y
             	________  ________   ________  ________  ________             &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp RET
             	&kp LSHFT ________   ________  ________  ________             ________   ________  ________  ________   &kp DE_SS
             	                               ________  ________             ________   &kp DEL
@@ -216,7 +238,7 @@
 
         mac_nav_layer {
             bindings = <
-            	&kp ESC   ________   &run      &go_src   ________             &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp DE_Y
+            	&kp ESC   &lck_mac   &run      &go_src   ________             &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp DE_Y
             	________  ________   ________  ________  ________             &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp RET
             	&kp LSHFT ________   ________  ________  ________             ________   ________  ________  ________   &kp DE_SS
             	                               ________  ________             ________   &kp DEL
