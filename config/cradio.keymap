@@ -59,6 +59,7 @@
 // home row mod mac
 #define CMD_I  &hm LGUI I
 #define CMD_T  &hm LGUI T
+#define CTL_H  &hm RCTRL H
 
 &sk {
         release-after-ms = <3000>;
@@ -229,7 +230,7 @@
         mac_default_layer {
             bindings = <
                 &kp J    &kp L  &kp U        &kp A        &kp Q                   &kp W        &kp B      &kp D      &kp G    &kp DE_Z
-                C_M_NAV  ALT_R  CMD_I        SFT_E        &kp O                   &kp M        SFT_N      CMD_T      RALT_S   &kp H
+                C_M_NAV  ALT_R  CMD_I        SFT_E        &kp O                   &kp M        SFT_N      CMD_T      RALT_S   CTL_H
                 &kp V    &kp X  &kp DE_UDIA  &kp DE_ADIA  &kp DE_ODIA             &kp P        &kp F      &kp COMMA  &kp DOT  &kp K
                                              &mo M_NUM    &kp LSHFT               SPACE_M_SYM  &kp BSPC
              >;
