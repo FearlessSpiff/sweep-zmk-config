@@ -196,6 +196,12 @@
             key-positions = <19 29>;
             bindings = <&kp RET>;
         };
+
+        combo_win {
+            timeout-ms = <50>;
+            key-positions = <30 31>;
+            bindings = <&kp LGUI>;
+        };
     };
 
     behaviors {
