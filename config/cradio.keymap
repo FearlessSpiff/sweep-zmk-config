@@ -265,10 +265,10 @@
 
         num_layer {
             bindings = <
-                ________  ________  ________  &mo SET     &mo BT            &kp DE_SLSH  &kp N7  &kp N8  &kp N9  &kp DE_MINS
-                &sk LGUI  &sk LALT  &sk LCTRL &sk LSHIFT  ________          &kp DE_ASTR  &kp N4  &kp N5  &kp N6  &kp DE_PLUS
-                ________  ________  ________  &mo FN      ________          &kp DE_SCLN  &kp N1  &kp N2  &kp N3  &kp N0
-                                              ________    ________          &kp DE_COLN  &kp DOT
+                ________  ________  ________  &mo SET     ________         &kp DE_SLSH  &kp N7  &kp N8  &kp N9  &kp DE_MINS
+                &sk LGUI  &sk LALT  &sk LCTRL &sk LSHIFT  ________         &kp DE_ASTR  &kp N4  &kp N5  &kp N6  &kp DE_PLUS
+                ________  ________  ________  &mo FN      &mo BT           &kp DE_SCLN  &kp N1  &kp N2  &kp N3  &kp N0
+                                              ________    ________         &kp DE_COLN  &kp DOT
             >;
         };
 
@@ -343,9 +343,9 @@
 
         mac_num_layer {
             bindings = <
-                ________   ________  ________  &mo M_SET   &mo M_BT          &kp DE_SLSH  &kp N7  &kp N8  &kp N9  &kp DE_MINS
+                ________   ________  ________  &mo M_SET   ________          &kp DE_SLSH  &kp N7  &kp N8  &kp N9  &kp DE_MINS
                 &sk LCTRL  &sk LALT  &sk LGUI  &sk LSHIFT  ________          &kp DE_ASTR  &kp N4  &kp N5  &kp N6  &kp DE_PLUS
-                ________   ________  ________  &mo M_FN    ________          &kp DE_SCLN  &kp N1  &kp N2  &kp N3  &kp N0
+                ________   ________  ________  &mo M_FN    &mo M_BT          &kp DE_SCLN  &kp N1  &kp N2  &kp N3  &kp N0
                                                ________    ________          &kp DE_COLN  &kp DOT
             >;
         };
@@ -420,9 +420,9 @@
 
         game_num_layer {
             bindings = <
-                ________  ________  ________  &mo G_SET   &mo G_BT          &kp DE_SLSH  &kp N7  &kp N8  &kp N9  &kp DE_MINS
+                ________  ________  ________  &mo G_SET   ________          &kp DE_SLSH  &kp N7  &kp N8  &kp N9  &kp DE_MINS
                 &kp LGUI  &sk LALT  &sk LCTRL &sk LSHIFT  ________          &kp DE_ASTR  &kp N4  &kp N5  &kp N6  &kp DE_PLUS
-                ________  ________  ________  &mo G_FN    ________          &kp DE_SCLN  &kp N1  &kp N2  &kp N3  &kp N0
+                ________  ________  ________  &mo G_FN    &mo G_BT          &kp DE_SCLN  &kp N1  &kp N2  &kp N3  &kp N0
                                               ________    ________          &kp DE_COLN  &kp DOT
             >;
         };
