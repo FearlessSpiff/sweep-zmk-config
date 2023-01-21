@@ -50,13 +50,15 @@
 #define C_NAV        &lt NAV C
 #define C_M_NAV      &lt M_NAV C
 #define C_G_NAV      &lt G_NAV C
+#define Y_NUM        &lt NUM Z
+#define Y_M_NUM      &lt M_NUM Z
+#define Y_G_NUM      &lt G_NUM Z
 
 #define BT_1       &bt BT_SEL 0
 #define BT_2       &bt BT_SEL 1
 #define BT_3       &bt BT_SEL 2
 #define BT_4       &bt BT_SEL 3
 #define BT_5       &bt BT_SEL 4
-#define BT_6       &bt BT_SEL 5
 #define BT_CLEAR   &bt BT_CLR
 
 #define EXT_OFF  &ext_power EP_OFF
@@ -233,7 +235,7 @@
                 &kp J  &kp L  &kp U        &kp A        &kp Q                   &kp W      &kp B      &kp D      &kp G    &kp DE_Z
                 C_NAV  ALT_R  CTL_I        SFT_E        &kp O                   &kp M      SFT_N      CTL_T      RALT_S   &kp H
                 &kp V  &kp X  &kp DE_UDIA  &kp DE_ADIA  &kp DE_ODIA             &kp P      &kp F      &kp COMMA  &kp DOT  &kp K
-                                           &mo NUM      &kp LSHFT               SPACE_SYM  &kp BSPC
+                                           Y_NUM        &kp LSHFT               SPACE_SYM  &kp BSPC
              >;
         };
 
@@ -268,7 +270,6 @@
                 ________  ________  ________  &mo SET     ________         &kp DE_SLSH  &kp N7  &kp N8  &kp N9  &kp DE_MINS
                 &sk LGUI  &sk LALT  &sk LCTRL &sk LSHIFT  ________         &kp DE_ASTR  &kp N4  &kp N5  &kp N6  &kp DE_PLUS
                 ________  ________  ________  &mo FN      &mo BT           &kp DE_SCLN  &kp N1  &kp N2  &kp N3  &kp N0
-                                              ________    ________         &kp DE_COLN  &kp DOT
                                               ________    ________         &kp DE_COLN  &kp DOT
             >;
         };
@@ -312,7 +313,7 @@
                 &kp J    &kp L  &kp U        &kp A        &kp Q                   &kp W        &kp B      &kp D      &kp G    &kp DE_Z
                 C_M_NAV  ALT_R  CMD_I        SFT_E        &kp O                   &kp M        SFT_N      CMD_T      RALT_S   CTL_H
                 &kp V    &kp X  &kp DE_UDIA  &kp DE_ADIA  &kp DE_ODIA             &kp P        &kp F      &kp COMMA  &kp DOT  &kp K
-                                             &mo M_NUM    &kp LSHFT               SPACE_M_SYM  &kp BSPC
+                                             Y_M_NUM      &kp LSHFT               SPACE_M_SYM  &kp BSPC
              >;
         };
 
@@ -390,7 +391,7 @@
                 &kp J    &kp L  &kp U        &kp A        &kp Q                   &kp W        &kp B      &kp D      &kp G    &kp DE_Z
                 C_G_NAV  &kp R  &kp I        &kp E        &kp O                   &kp M        &kp N      &kp T      &kp S    &kp H
                 &kp V    &kp X  &kp DE_UDIA  &kp DE_ADIA  &kp DE_ODIA             &kp P        &kp F      &kp COMMA  &kp DOT  &kp K
-                                             &mo G_NUM    &kp LSHFT               SPACE_G_SYM  &kp BSPC
+                                             Y_G_NUM      &kp LSHFT               SPACE_G_SYM  &kp BSPC
              >;
         };
 
