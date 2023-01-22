@@ -76,7 +76,8 @@
 #define SFT_LBRC &hm RSHIFT DE_LBRC
 #define CTL_T    &hm RCTRL T
 #define RALT_S   &hm RALT S
-#define GUI_K   &hm RGUI K
+#define ALT_H    &hm LALT H
+#define GUI_K    &hm RGUI K
 
 // home row mod mac
 #define CMD_I  &hm LGUI I
@@ -237,7 +238,7 @@
         default_layer {
             bindings = <
                 &kp J  &kp L  &kp U        &kp A        &kp Q                   &kp W      &kp B      &kp D      &kp G    &kp DE_Z
-                C_NAV  ALT_R  CTL_I        SFT_E        &kp O                   &kp M      SFT_N      CTL_T      RALT_S   &kp H
+                C_NAV  ALT_R  CTL_I        SFT_E        &kp O                   &kp M      SFT_N      CTL_T      RALT_S   ALT_H
                 GUI_V  &kp X  &kp DE_UDIA  &kp DE_ADIA  &kp DE_ODIA             &kp P      &kp F      &kp COMMA  &kp DOT  GUI_K
                                            Y_NUM        &kp LSHFT               SPACE_SYM  &kp BSPC
              >;
@@ -315,7 +316,7 @@
         mac_default_layer {
             bindings = <
                 &kp J    &kp L  &kp U        &kp A        &kp Q                   &kp W        &kp B      &kp D      &kp G    &kp DE_Z
-                C_M_NAV  ALT_R  CMD_I        SFT_E        &kp O                   &kp M        SFT_N      CMD_T      RALT_S   CTL_H
+                C_M_NAV  ALT_R  CMD_I        SFT_E        &kp O                   &kp M        SFT_N      CMD_T      RALT_S   ALT_H
                 CTL_V    &kp X  &kp DE_UDIA  &kp DE_ADIA  &kp DE_ODIA             &kp P        &kp F      &kp COMMA  &kp DOT  CTL_K
                                              Y_M_NUM      &kp LSHFT               SPACE_M_SYM  &kp BSPC
              >;
