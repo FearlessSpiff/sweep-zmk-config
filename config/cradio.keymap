@@ -65,6 +65,7 @@
 #define EXT_ON   &ext_power EP_ON
 
 // home row mod left
+#define GUI_V &hm LGUI V
 #define ALT_R &hm LALT R
 #define CTL_I &hm LCTRL I
 #define SFT_E &hm LSHIFT E
@@ -75,11 +76,14 @@
 #define SFT_LBRC &hm RSHIFT DE_LBRC
 #define CTL_T    &hm RCTRL T
 #define RALT_S   &hm RALT S
+#define GUI_K   &hm RGUI K
 
 // home row mod mac
 #define CMD_I  &hm LGUI I
 #define CMD_T  &hm LGUI T
 #define CTL_H  &hm RCTRL H
+#define CTL_K  &hm RCTRL K
+#define CTL_V  &hm LCTRL V
 
 &sk {
         release-after-ms = <3000>;
@@ -234,7 +238,7 @@
             bindings = <
                 &kp J  &kp L  &kp U        &kp A        &kp Q                   &kp W      &kp B      &kp D      &kp G    &kp DE_Z
                 C_NAV  ALT_R  CTL_I        SFT_E        &kp O                   &kp M      SFT_N      CTL_T      RALT_S   &kp H
-                &kp V  &kp X  &kp DE_UDIA  &kp DE_ADIA  &kp DE_ODIA             &kp P      &kp F      &kp COMMA  &kp DOT  &kp K
+                GUI_V  &kp X  &kp DE_UDIA  &kp DE_ADIA  &kp DE_ODIA             &kp P      &kp F      &kp COMMA  &kp DOT  GUI_K
                                            Y_NUM        &kp LSHFT               SPACE_SYM  &kp BSPC
              >;
         };
@@ -312,7 +316,7 @@
             bindings = <
                 &kp J    &kp L  &kp U        &kp A        &kp Q                   &kp W        &kp B      &kp D      &kp G    &kp DE_Z
                 C_M_NAV  ALT_R  CMD_I        SFT_E        &kp O                   &kp M        SFT_N      CMD_T      RALT_S   CTL_H
-                &kp V    &kp X  &kp DE_UDIA  &kp DE_ADIA  &kp DE_ODIA             &kp P        &kp F      &kp COMMA  &kp DOT  &kp K
+                CTL_V    &kp X  &kp DE_UDIA  &kp DE_ADIA  &kp DE_ODIA             &kp P        &kp F      &kp COMMA  &kp DOT  CTL_K
                                              Y_M_NUM      &kp LSHFT               SPACE_M_SYM  &kp BSPC
              >;
         };
