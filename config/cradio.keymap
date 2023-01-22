@@ -19,25 +19,22 @@
 #define NUM     3
 #define FN      4
 #define SET     5
-#define BT      6
 
 // Mac
-#define M_DEF   7
-#define M_NAV   8
-#define M_SYM   9
-#define M_NUM   10
-#define M_FN    11
-#define M_SET   12
-#define M_BT    13
+#define M_DEF   6
+#define M_NAV   7
+#define M_SYM   8
+#define M_NUM   9
+#define M_FN    10
+#define M_SET   11
 
 // Gaming without HRM
-#define G_DEF   14
-#define G_NAV   15
-#define G_SYM   16
-#define G_NUM   17
-#define G_FN    18
-#define G_SET   19
-#define G_BT    20
+#define G_DEF   12
+#define G_NAV   13
+#define G_SYM   14
+#define G_NUM   15
+#define G_FN    16
+#define G_SET   17
 
 
 // Special shortcuts
@@ -206,14 +203,14 @@
             timeout-ms = <50>;
             key-positions = <30 31>;
             bindings = <&kp LGUI>;
-            layers = <0 1 2 3 4 5 6 14 15 16 17 18 19 20>;
+            layers = <0 1 2 3 4 5 12 13 14 15 16 17>;
         };
 
         combo_mac_globe {
             timeout-ms = <50>;
             key-positions = <30 31>;
             bindings = <&kp CAPS>;
-            layers = <7 8 9 10 11 12 13>;
+            layers = <6 7 8 9 10 11>;
         };
     };
 
@@ -272,7 +269,7 @@
             bindings = <
                 ________  ________  ________  &mo SET     ________         &kp DE_SLSH  &kp N7  &kp N8  &kp N9  &kp DE_MINS
                 &sk LGUI  &sk LALT  &sk LCTRL &sk LSHIFT  ________         &kp DE_ASTR  &kp N4  &kp N5  &kp N6  &kp DE_PLUS
-                ________  ________  ________  &mo FN      &mo BT           &kp DE_SCLN  &kp N1  &kp N2  &kp N3  &kp N0
+                ________  ________  ________  &mo FN      ________         &kp DE_SCLN  &kp N1  &kp N2  &kp N3  &kp N0
                                               ________    ________         &kp DE_COLN  &kp DOT
             >;
         };
@@ -290,20 +287,10 @@
 
         settings_layer {
             bindings = <
-                EXT_OFF       EXT_ON        ________  ________  ________          ________  ________  ________  ________  &to DEF
+                EXT_OFF       EXT_ON        ________  ________  BT_CLEAR          ________  ________  ________  ________  &to DEF
                 &out OUT_USB  &out OUT_BLE  ________  ________  ________          ________  &to_ipad  BT_5      ________  &to M_DEF
                 &reset        &bootloader   ________  ________  ________          &reset    &to_mtbk  &to_six   &to_nca   &to G_DEF
                                                       ________  ________          ________  ________
-            >;
-        };
-
-
-        bt_layer {
-            bindings = <
-                ________  ________  ________  ________  BT_CLEAR          ________  ________  ________  ________  ________
-                ________  ________  ________  ________  ________          ________  BT_4      BT_5      ________  ________
-                ________  ________  ________  ________  ________          ________  BT_1      BT_2      BT_3      ________
-                                              ________  ________          ________  ________
             >;
         };
 
@@ -350,7 +337,7 @@
             bindings = <
                 ________   ________  ________  &mo M_SET   ________          &kp DE_SLSH  &kp N7  &kp N8  &kp N9  &kp DE_MINS
                 &sk LCTRL  &sk LALT  &sk LGUI  &sk LSHIFT  ________          &kp DE_ASTR  &kp N4  &kp N5  &kp N6  &kp DE_PLUS
-                ________   ________  ________  &mo M_FN    &mo M_BT          &kp DE_SCLN  &kp N1  &kp N2  &kp N3  &kp N0
+                ________   ________  ________  &mo M_FN    ________          &kp DE_SCLN  &kp N1  &kp N2  &kp N3  &kp N0
                                                ________    ________          &kp DE_COLN  &kp DOT
             >;
         };
@@ -368,20 +355,10 @@
 
         mac_settings_layer {
             bindings = <
-                EXT_OFF       EXT_ON        ________  ________  ________          ________  ________  ________  ________  &to DEF
+                EXT_OFF       EXT_ON        ________  ________  BT_CLEAR          ________  ________  ________  ________  &to DEF
                 &out OUT_USB  &out OUT_BLE  ________  ________  ________          ________  &to_ipad  BT_5      ________  &to M_DEF
                 &reset        &bootloader   ________  ________  ________          &reset    &to_mtbk  &to_six   &to_nca   &to G_DEF
                                                       ________  ________          ________  ________
-            >;
-        };
-
-
-        mac_bt_layer {
-            bindings = <
-                ________  ________  ________  ________  BT_CLEAR          ________  ________  ________  ________  ________
-                ________  ________  ________  ________  ________          ________  BT_4      BT_5      ________  ________
-                ________  ________  ________  ________  ________          ________  BT_1      BT_2      BT_3      ________
-                                              ________  ________          ________  ________
             >;
         };
 
@@ -427,7 +404,7 @@
             bindings = <
                 ________  ________  ________  &mo G_SET   ________          &kp DE_SLSH  &kp N7  &kp N8  &kp N9  &kp DE_MINS
                 &kp LGUI  &sk LALT  &sk LCTRL &sk LSHIFT  ________          &kp DE_ASTR  &kp N4  &kp N5  &kp N6  &kp DE_PLUS
-                ________  ________  ________  &mo G_FN    &mo G_BT          &kp DE_SCLN  &kp N1  &kp N2  &kp N3  &kp N0
+                ________  ________  ________  &mo G_FN    ________          &kp DE_SCLN  &kp N1  &kp N2  &kp N3  &kp N0
                                               ________    ________          &kp DE_COLN  &kp DOT
             >;
         };
@@ -445,20 +422,10 @@
 
         game_settings_layer {
             bindings = <
-                EXT_OFF       EXT_ON        ________  ________  ________          ________  ________  ________  ________  &to DEF
+                EXT_OFF       EXT_ON        ________  ________  BT_CLEAR          ________  ________  ________  ________  &to DEF
                 &out OUT_USB  &out OUT_BLE  ________  ________  ________          ________  &to_ipad  BT_5      ________  &to M_DEF
                 &reset        &bootloader   ________  ________  ________          &reset    &to_mtbk  &to_six   &to_nca   &to G_DEF
                                                       ________  ________          ________  ________
-            >;
-        };
-
-
-        game_bt_layer {
-            bindings = <
-                ________  ________  ________  ________  BT_CLEAR          ________  ________  ________  ________  ________
-                ________  ________  ________  ________  ________          ________  BT_4      BT_5      ________  ________
-                ________  ________  ________  ________  ________          ________  BT_1      BT_2      BT_3      ________
-                                              ________  ________          ________  ________
             >;
         };
 
