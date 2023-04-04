@@ -189,12 +189,6 @@
 
         combo_tab {
             timeout-ms = <50>;
-            key-positions = <0 10>;
-            bindings = <&kp TAB>;
-        };
-
-        combo_tab_under {
-            timeout-ms = <50>;
             key-positions = <10 20>;
             bindings = <&kp TAB>;
         };
