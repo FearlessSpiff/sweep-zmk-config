@@ -81,6 +81,10 @@
 #define CTL_K  &hm RCTRL K
 #define CTL_V  &hm LCTRL V
 
+// mac shortcuts
+#define M_HME   &kp LG(LEFT)
+#define M_END   &kp LG(RIGHT)
+
 &sk {
         release-after-ms = <3000>;
 };
@@ -287,10 +291,10 @@
 
         settings_layer {
             bindings = <
-                EXT_OFF       EXT_ON        ________  ________  BT_CLEAR          ________  ________  ________  ________  &to DEF
-                &out OUT_USB  &out OUT_BLE  ________  ________  ________          ________  &to_ipad  BT_5      ________  &to M_DEF
-                &reset        &bootloader   ________  ________  ________          &reset    &to_mtbk  &to_six   &to_nca   &to G_DEF
-                                                      ________  ________          ________  ________
+                EXT_OFF       EXT_ON        ________  ________  BT_CLEAR          ________    ________  ________  ________  &to DEF
+                &out OUT_USB  &out OUT_BLE  ________  ________  ________          ________    &to_ipad  BT_5      ________  &to M_DEF
+                &sys_reset    &bootloader   ________  ________  ________          &sys_reset  &to_mtbk  &to_six   &to_nca   &to G_DEF
+                                                      ________  ________          ________    ________
             >;
         };
 
@@ -310,7 +314,7 @@
 
         mac_nav_layer {
             bindings = <
-            	&kp ESC   &lck_mac   &run      &go_src   ________             &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp DE_Y
+            	&kp ESC   &lck_mac   &run      &go_src   ________             &kp PG_UP  M_HME     &kp UP    M_END     &kp DE_Y
             	________  ________   ________  ________  ________             &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp RET
             	&kp LSHFT ________   ________  ________  ________             ________   ________  ________  ________   &kp DE_SS
             	                               ________  ________             ________   &kp DEL
@@ -355,10 +359,10 @@
 
         mac_settings_layer {
             bindings = <
-                EXT_OFF       EXT_ON        ________  ________  BT_CLEAR          ________  ________  ________  ________  &to DEF
-                &out OUT_USB  &out OUT_BLE  ________  ________  ________          ________  &to_ipad  BT_5      ________  &to M_DEF
-                &reset        &bootloader   ________  ________  ________          &reset    &to_mtbk  &to_six   &to_nca   &to G_DEF
-                                                      ________  ________          ________  ________
+                EXT_OFF       EXT_ON        ________  ________  BT_CLEAR          ________    ________  ________  ________  &to DEF
+                &out OUT_USB  &out OUT_BLE  ________  ________  ________          ________    &to_ipad  BT_5      ________  &to M_DEF
+                &sys_reset    &bootloader   ________  ________  ________          &sys_reset  &to_mtbk  &to_six   &to_nca   &to G_DEF
+                                                      ________  ________          ________    ________
             >;
         };
 
@@ -422,10 +426,10 @@
 
         game_settings_layer {
             bindings = <
-                EXT_OFF       EXT_ON        ________  ________  BT_CLEAR          ________  ________  ________  ________  &to DEF
-                &out OUT_USB  &out OUT_BLE  ________  ________  ________          ________  &to_ipad  BT_5      ________  &to M_DEF
-                &reset        &bootloader   ________  ________  ________          &reset    &to_mtbk  &to_six   &to_nca   &to G_DEF
-                                                      ________  ________          ________  ________
+                EXT_OFF       EXT_ON        ________  ________  BT_CLEAR          ________    ________  ________  ________  &to DEF
+                &out OUT_USB  &out OUT_BLE  ________  ________  ________          ________    &to_ipad  BT_5      ________  &to M_DEF
+                &sys_reset    &bootloader   ________  ________  ________          &sys_reset  &to_mtbk  &to_six   &to_nca   &to G_DEF
+                                                      ________  ________          ________    ________
             >;
         };
 
