@@ -82,8 +82,10 @@
 #define CTL_V  &hm LCTRL V
 
 // mac shortcuts
-#define M_HME   &kp LG(LEFT)
-#define M_END   &kp LG(RIGHT)
+#define M_HME    &kp LG(LEFT)
+#define M_END    &kp LG(RIGHT)
+#define M_PUP    &kp LA(UP)
+#define M_PDWN   &kp LA(DOWN)
 
 &sk {
         release-after-ms = <3000>;
@@ -314,10 +316,10 @@
 
         mac_nav_layer {
             bindings = <
-            	&kp ESC   &lck_mac   &run      &go_src   ________             &kp PG_UP  M_HME     &kp UP    M_END     &kp DE_Y
-            	________  ________   ________  ________  ________             &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp RET
-            	&kp LSHFT ________   ________  ________  ________             ________   ________  ________  ________   &kp DE_SS
-            	                               ________  ________             ________   &kp DEL
+            	&kp ESC   &lck_mac   &run      &go_src   ________             M_PUP    M_HME     &kp UP    M_END     &kp DE_Y
+            	________  ________   ________  ________  ________             M_PDWN   &kp LEFT  &kp DOWN  &kp RIGHT  &kp RET
+            	&kp LSHFT ________   ________  ________  ________             ________  ________  ________  ________   &kp DE_SS
+            	                               ________  ________             ________  &kp DEL
    			>;
         };
 
