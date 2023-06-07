@@ -81,6 +81,12 @@
 #define CTL_K  &hm RCTRL K
 #define CTL_V  &hm LCTRL V
 
+// mac shortcuts
+#define M_HME    &kp LG(LEFT)
+#define M_END    &kp LG(RIGHT)
+#define M_PUP    &kp LA(UP)
+#define M_PDWN   &kp LA(DOWN)
+
 &sk {
         release-after-ms = <3000>;
 };
@@ -189,7 +195,7 @@
 
         combo_tab {
             timeout-ms = <50>;
-            key-positions = <0 10>;
+            key-positions = <10 20>;
             bindings = <&kp TAB>;
         };
 
@@ -243,8 +249,8 @@
         nav_layer {
             bindings = <
             	&kp ESC   &lck       &run      &go_src   ________             &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp DE_Y
-            	________  ________   ________  &kp TAB   ________             &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp RET
-            	&kp LSHFT ________   ________  ________  ________             ________   ________  ________  ________   &kp DE_SS
+            	________  ________   ________  ________  &kp TAB              &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp RET
+            	&kp LSHFT ________   ________  &kp TAB   ________             ________   ________  ________  ________   &kp DE_SS
             	                               ________  ________             ________   &kp DEL
    			>;
         };
@@ -287,10 +293,10 @@
 
         settings_layer {
             bindings = <
-                EXT_OFF       EXT_ON        ________  ________  BT_CLEAR          ________  ________  ________  ________  &to DEF
-                &out OUT_USB  &out OUT_BLE  ________  ________  ________          ________  &to_ipad  BT_5      ________  &to M_DEF
-                &reset        &bootloader   ________  ________  ________          &reset    &to_mtbk  &to_six   &to_nca   &to G_DEF
-                                                      ________  ________          ________  ________
+                EXT_OFF       EXT_ON        ________  ________  BT_CLEAR          ________    ________  ________  ________  &to DEF
+                &out OUT_USB  &out OUT_BLE  ________  ________  ________          ________    &to_ipad  BT_5      ________  &to M_DEF
+                &sys_reset    &bootloader   ________  ________  ________          &sys_reset  &to_mtbk  &to_six   &to_nca   &to G_DEF
+                                                      ________  ________          ________    ________
             >;
         };
 
@@ -310,10 +316,10 @@
 
         mac_nav_layer {
             bindings = <
-            	&kp ESC   &lck_mac   &run      &go_src   ________             &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp DE_Y
-            	________  ________   ________  ________  ________             &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp RET
-            	&kp LSHFT ________   ________  ________  ________             ________   ________  ________  ________   &kp DE_SS
-            	                               ________  ________             ________   &kp DEL
+            	&kp ESC   &lck_mac   &run      &go_src   ________             M_PUP    M_HME     &kp UP    M_END     &kp DE_Y
+            	________  ________   ________  ________  ________             M_PDWN   &kp LEFT  &kp DOWN  &kp RIGHT  &kp RET
+            	&kp LSHFT ________   ________  ________  ________             ________  ________  ________  ________   &kp DE_SS
+            	                               ________  ________             ________  &kp DEL
    			>;
         };
 
@@ -355,10 +361,10 @@
 
         mac_settings_layer {
             bindings = <
-                EXT_OFF       EXT_ON        ________  ________  BT_CLEAR          ________  ________  ________  ________  &to DEF
-                &out OUT_USB  &out OUT_BLE  ________  ________  ________          ________  &to_ipad  BT_5      ________  &to M_DEF
-                &reset        &bootloader   ________  ________  ________          &reset    &to_mtbk  &to_six   &to_nca   &to G_DEF
-                                                      ________  ________          ________  ________
+                EXT_OFF       EXT_ON        ________  ________  BT_CLEAR          ________    ________  ________  ________  &to DEF
+                &out OUT_USB  &out OUT_BLE  ________  ________  ________          ________    &to_ipad  BT_5      ________  &to M_DEF
+                &sys_reset    &bootloader   ________  ________  ________          &sys_reset  &to_mtbk  &to_six   &to_nca   &to G_DEF
+                                                      ________  ________          ________    ________
             >;
         };
 
@@ -422,10 +428,10 @@
 
         game_settings_layer {
             bindings = <
-                EXT_OFF       EXT_ON        ________  ________  BT_CLEAR          ________  ________  ________  ________  &to DEF
-                &out OUT_USB  &out OUT_BLE  ________  ________  ________          ________  &to_ipad  BT_5      ________  &to M_DEF
-                &reset        &bootloader   ________  ________  ________          &reset    &to_mtbk  &to_six   &to_nca   &to G_DEF
-                                                      ________  ________          ________  ________
+                EXT_OFF       EXT_ON        ________  ________  BT_CLEAR          ________    ________  ________  ________  &to DEF
+                &out OUT_USB  &out OUT_BLE  ________  ________  ________          ________    &to_ipad  BT_5      ________  &to M_DEF
+                &sys_reset    &bootloader   ________  ________  ________          &sys_reset  &to_mtbk  &to_six   &to_nca   &to G_DEF
+                                                      ________  ________          ________    ________
             >;
         };
 
