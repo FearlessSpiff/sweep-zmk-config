@@ -295,7 +295,7 @@
             bindings = <
                 EXT_OFF       EXT_ON        ________  ________  BT_CLEAR          ________    ________  ________  ________  &to DEF
                 &out OUT_USB  &out OUT_BLE  ________  ________  ________          ________    &to_ipad  BT_5      ________  &to M_DEF
-                &sys_reset    &bootloader   ________  ________  ________          &sys_reset  &to_mtbk  &to_six   &to_nca   &to G_DEF
+                ________      ________      ________  ________  ________          ________    &to_mtbk  &to_six   &to_nca   &to G_DEF
                                                       ________  ________          ________    ________
             >;
         };
@@ -363,7 +363,7 @@
             bindings = <
                 EXT_OFF       EXT_ON        ________  ________  BT_CLEAR          ________    ________  ________  ________  &to DEF
                 &out OUT_USB  &out OUT_BLE  ________  ________  ________          ________    &to_ipad  BT_5      ________  &to M_DEF
-                &sys_reset    &bootloader   ________  ________  ________          &sys_reset  &to_mtbk  &to_six   &to_nca   &to G_DEF
+                ________      ________      ________  ________  ________          ________    &to_mtbk  &to_six   &to_nca   &to G_DEF
                                                       ________  ________          ________    ________
             >;
         };
@@ -430,7 +430,7 @@
             bindings = <
                 EXT_OFF       EXT_ON        ________  ________  BT_CLEAR          ________    ________  ________  ________  &to DEF
                 &out OUT_USB  &out OUT_BLE  ________  ________  ________          ________    &to_ipad  BT_5      ________  &to M_DEF
-                &sys_reset    &bootloader   ________  ________  ________          &sys_reset  &to_mtbk  &to_six   &to_nca   &to G_DEF
+                ________      ________      ________  ________  ________          ________    &to_mtbk  &to_six   &to_nca   &to G_DEF
                                                       ________  ________          ________    ________
             >;
         };
